@@ -45,7 +45,6 @@ MongoClient.connect(URL, function(err, db) {
   
   app.listen(process.env.PORT || 8080, function() {
     console.log('Listening on port');
-});
-
+  });
   
 });
