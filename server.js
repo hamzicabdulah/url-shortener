@@ -2,7 +2,7 @@ var express = require('express'), app = express();
 
 var MongoClient = require('mongodb').MongoClient;
 
-var URL = process.env.MONGODB_URI;
+var URL = process.env.MONGOLAB_URI;
 
 MongoClient.connect(URL, function(err, db) {
   if (err) return console.log(err);
@@ -43,8 +43,8 @@ MongoClient.connect(URL, function(err, db) {
     });
   });
   
-  app.listen(8080, function() {
-    console.log('Listening on port 8080...');
+  app.listen(process.env.PORT || 8080, function() {
+    console.log('Listening on port 8080');
   });
 
   
