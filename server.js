@@ -2,7 +2,7 @@ var express = require('express'), app = express();
 
 var MongoClient = require('mongodb').MongoClient;
 
-var URL = process.env.MONGOLAB_URI;
+var URL = "mongodb://randomuser:randompass@ds161069.mlab.com:61069/url-short-db";
 
 MongoClient.connect(URL, function(err, db) {
   if (err) return console.log(err);
