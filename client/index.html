@@ -1,0 +1,43 @@
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>URL Shortener microservice</title>
+        <meta name="author" content="Abdulah Hamzic">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css?family=PT+Serif|Russo+One" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="stylesheet/style.css"> 
+    </head>
+    <body>
+        <h1 class="header">
+             URL Shortener Microservice
+        </h1>
+        <h3>Usage:</h3>
+        You can pass a URL as a parameter and you will receive a shortened URL in the JSON response.<br>
+        When you visit that shortened URL, it will redirect you to your original link.
+        <div class="examples">
+            <div>
+                <h3>Example creation usage:</h3>
+                <code><a target="_blank" href="https://url-shortener-hamzicabdulah.herokuapp.com/new/https://www.google.com">https://url-shortener-hamzicabdulah.herokuapp.com/new/https://www.google.com</a></code><br>
+                <code><a target="_blank" href="https://url-shortener-hamzicabdulah.herokuapp.com/new/http://foo.com:80">https://url-shortener-hamzicabdulah.herokuapp.com/new/http://foo.com:80</a></code>
+            </div>
+            <div>
+                <h3>Example creation output:</h3>
+                <code>
+                    {"original_url":"http://foo.com:80","short_url":"https://url-shortener-hamzicabdulah.herokuapp.com/8170"}
+                </code>
+            </div>
+        </div>
+        <div class="examples">
+            <div>
+                <h3>Example short link usage:</h3>
+                <code><a target="_blank" href="https://url-shortener-hamzicabdulah.herokuapp.com/2871">https://url-shortener-hamzicabdulah.herokuapp.com/2871</a></code>
+            </div>
+            <div>
+                <h3>Redirects to:</h3>
+                <code><a target="_blank" href="https://www.google.com/">https://www.google.com/</a></code>
+            </div>
+        </div>
+    </body>
+</html>
